@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-image: url("./assets/images/bg-cover.png");
+}
+h1 {
+  font-family: "Quicksand", sans-serif;
+}
+/* styles.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info-container > * {
+  margin: 0 10px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  gap: 10px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 1200px) {
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .card-grid {
+    grid-template-columns: repeat(5, 2fr);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .app-container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .card-grid {
+    grid-template-columns: repeat(4, 2fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .app-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .card-grid {
+    grid-template-columns: repeat(3, 2fr);
+  }
+}
